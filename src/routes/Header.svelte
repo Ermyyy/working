@@ -121,6 +121,45 @@
 		40% { transform: translateY(-60%); }
 		100% { transform: translateY(0%); }
 	}
+	.container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+        .dish,
+        .recipe {
+            max-width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Стили для планшетов и десктопов */
+        @media only screen and (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                margin: 0 auto;
+            }
+
+            .dish,
+            .recipe {
+                max-width: 48%;
+            }
+        }
+
+        /* Стили для больших десктопов */
+        @media only screen and (min-width: 1200px) {
+            .container {
+                max-width: 1200px;
+            }
+
+            .dish,
+            .recipe {
+                max-width: 23%;
+            }
+        }
 	</style>
 
 <main>
