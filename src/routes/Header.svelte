@@ -12,7 +12,7 @@
 	h1,h2,h3 {
 		text-align: center;
 	}
-  a {
+  	a {
 		text-decoration: none;
 		color: rgb(0, 0, 0);
 		speak: none;
@@ -23,6 +23,10 @@
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		font-family: 'Heebo', sans-serif;
+	}
+	body {
+		margin: 0;
+		padding: 0;
 	}
 	.header-link {
 		font-size: 32px;
@@ -121,10 +125,11 @@
 		40% { transform: translateY(-60%); }
 		100% { transform: translateY(0%); }
 	}
-	.container {
-        max-width: 100%;
-        padding: 0 10px;
-    }
+	        /* Стили для мобильных устройств */
+			.container {
+            max-width: 100%;
+            padding: 0 10px;
+        }
 
         .dish,
         .recipe {
@@ -137,15 +142,19 @@
         }
 
         /* Стили для планшетов и десктопов */
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 600px) {
             .container {
-                max-width: 768px;
+                max-width: 600px;
                 margin: 0 auto;
             }
 
             .dish,
             .recipe {
                 max-width: 48%;
+            }
+
+            h1, h2, h3 {
+                text-align: center;
             }
         }
 
@@ -157,7 +166,21 @@
 
             .dish,
             .recipe {
-                max-width: 23%;
+                max-width: 30%;
+            }
+        }
+
+        /* Дополнительные стили для мобильных устройств с шириной экрана меньше 600px */
+        @media only screen and (max-width: 600px) {
+            .recipe {
+                margin-top: 20px; /* Добавляем отступ сверху */
+                overflow: auto; /* Добавляем возможность прокрутки содержимого */
+				max-width: 80%;
+            }
+
+            .recipe img {
+                max-width: 100%; /* Устанавливаем максимальную ширину изображения в блоке .recipe */
+                height: auto; /* Устанавливаем автоматическую высоту изображения */
             }
         }
 	</style>
